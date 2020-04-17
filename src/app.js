@@ -42,7 +42,7 @@ class App {
   middlewares() {
     this.app.use(cors(cortsOptions));
     this.app.use(helmet());
-    this.app.use(delay(2000))
+    this.app.use(delay(2000));
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use('/images/', express.static(resolve(__dirname, '..', 'uploads', 'images')));
